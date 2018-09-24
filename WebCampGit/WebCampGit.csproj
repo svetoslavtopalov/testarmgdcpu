@@ -105,6 +105,7 @@
     <Content Include="externalref\SharedComponents.pdb" />
     <Content Include="HighCPUPage1.aspx" />
     <Content Include="HighCPUPage2.aspx" />
+    <Content Include="HiringDB.aspx" />
     <Content Include="leakingconnections.aspx" />
     <Content Include="SlowAsync.aspx" />
     <Content Include="StackOverflowPage.aspx" />
@@ -199,6 +200,13 @@
     </Compile>
     <Compile Include="HighCPUPage2.aspx.designer.cs">
       <DependentUpon>HighCPUPage2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HiringDB.aspx.cs">
+      <DependentUpon>HiringDB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HiringDB.aspx.designer.cs">
+      <DependentUpon>HiringDB.aspx</DependentUpon>
     </Compile>
     <Compile Include="leakingconnections.aspx.cs">
       <DependentUpon>leakingconnections.aspx</DependentUpon>

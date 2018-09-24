@@ -5,5 +5,5 @@
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="true" DataKeyNames="Alias" DataSourceID="SqlDataSource1">
    
 </asp:GridView>
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HiringConnectionString %>" SelectCommand="SELECT * FROM [Engineers]"></asp:SqlDataSource>
+<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:HiringConnectionString %>" SelectCommand="SELECT * FROM [Engineers] where PodName LIKE 'App Services' or PodName LIKE 'ARR'"></asp:SqlDataSource>
 </asp:Content>
