@@ -103,6 +103,8 @@
     <Content Include="docs\MySqlTransaction.xml" />
     <Content Include="externalref\SharedComponents.dll" />
     <Content Include="externalref\SharedComponents.pdb" />
+    <Content Include="HighCPUPage1.aspx" />
+    <Content Include="HighCPUPage2.aspx" />
     <Content Include="leakingconnections.aspx" />
     <Content Include="SlowAsync.aspx" />
     <Content Include="StackOverflowPage.aspx" />
@@ -183,6 +185,20 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HighCPUPage1.aspx.cs">
+      <DependentUpon>HighCPUPage1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HighCPUPage1.aspx.designer.cs">
+      <DependentUpon>HighCPUPage1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HighCPUPage2.aspx.cs">
+      <DependentUpon>HighCPUPage2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HighCPUPage2.aspx.designer.cs">
+      <DependentUpon>HighCPUPage2.aspx</DependentUpon>
     </Compile>
     <Compile Include="leakingconnections.aspx.cs">
       <DependentUpon>leakingconnections.aspx</DependentUpon>

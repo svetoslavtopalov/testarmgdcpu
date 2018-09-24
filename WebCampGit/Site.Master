@@ -121,6 +121,18 @@
                                     <span class="hidden-xs">Stack Overflow</span>
                                 </a>
                             </li>
+                             <li class="dropdown">
+                                <a href="~/highcpupage1.aspx" class="dropdown-toggle" runat="server">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                    <span class="hidden-xs">High CPU</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="~/highcpupage2.aspx" class="dropdown-toggle" runat="server">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                    <span class="hidden-xs">High CPU - 2</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
