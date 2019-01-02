@@ -27,6 +27,7 @@
 
                             <div class="col-xs-4 col-sm-8 top-panel-right">
                                 <h4>&nbsp;Demo WebApp-Azure App Service</h4>
+                                <h3><%= Environment.MachineName %></h3>
                             </div>
                         </div>
                     </div>
