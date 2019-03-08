@@ -37,12 +37,8 @@ steps:
   displayName: 'Copy files to $(build.artifactStagingDirectory)'
   inputs:
    SourceFolder: '($build.sourcesdirectory)'
-   Contents: |
-      **\bin\$(BuildConfiguration)\**
-   src\*.testsettings
-   TargetFolder: :'$(build.artifactStagingDirectory)'
-condtion: succeededOrFailed()
-
+   Contents: '**/bin/$(buildConfiguration)/**'
+   TargetFolder: '$(build.artifactStagingDirectory)'
 
 - task: PublishSymbols@2
   displayName: 'Publish symbols path'
@@ -56,3 +52,5 @@ condtion: succeededOrFailed()
   inputs:
     PathtoPublish: '$(build.artifactstagingdirectory)'
     ArtifactName: '$(Parameters.ArtifactName)'
+
+
