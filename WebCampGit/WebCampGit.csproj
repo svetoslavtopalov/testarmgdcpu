@@ -160,6 +160,8 @@
     <Content Include="Services.aspx" />
     <Content Include="SlowPage.aspx" />
     <Content Include="SlowSql.aspx" />
+    <Content Include="envvar.aspx" />
+    <Content Include="highsleep.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
