@@ -107,6 +107,7 @@
     <Content Include="HighCPUPage2.aspx" />
     <Content Include="HiringDB.aspx" />
     <Content Include="leakingconnections.aspx" />
+    <Content Include="ProcessCrash.aspx" />
     <Content Include="SlowAsync.aspx" />
     <Content Include="StackOverflowPage.aspx" />
     <Content Include="TestDatabaseconnection.aspx" />
@@ -216,6 +217,13 @@
     </Compile>
     <Compile Include="leakingconnections.aspx.designer.cs">
       <DependentUpon>leakingconnections.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessCrash.aspx.cs">
+      <DependentUpon>ProcessCrash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProcessCrash.aspx.designer.cs">
+      <DependentUpon>ProcessCrash.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services.aspx.cs">
