@@ -2,6 +2,8 @@
 
 A sample project used to mimic slowness in ASP.NET scenarios. This is used to test use-case and helpfulness of various diagnostic tools associated with ASP.NET for WebApps hosted in Azure App Service
 
+[![Build Status](https://dev.azure.com/puneetgdevops/FrontDoorTest/_apis/build/status/puneetg1983.WebCampGit?branchName=master)](https://dev.azure.com/puneetgdevops/FrontDoorTest/_build/latest?definitionId=3&branchName=master)
+
 # Contributing to this sample project
 
 You can Fork this repo and then generate a standard GIT pull request by following the instructions here - https://help.github.com/articles/creating-a-pull-request-from-a-fork/. Before submitting a pull request make sure that your code works and that you have tested it on an Azure Web App
