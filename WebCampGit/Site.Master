@@ -133,6 +133,18 @@
                                     <span class="hidden-xs">High CPU - 2</span>
                                 </a>
                             </li>
+                            <li class="dropdown">
+                                <a href="~/ProcessCrash.aspx" class="dropdown-toggle" runat="server">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                    <span class="hidden-xs">Process Crash</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="~/Envvars.aspx" class="dropdown-toggle" runat="server">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                    <span class="hidden-xs">Environment Variables</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
 

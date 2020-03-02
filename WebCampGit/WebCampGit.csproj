@@ -103,6 +103,7 @@
     <Content Include="docs\MySqlTransaction.xml" />
     <Content Include="externalref\SharedComponents.dll" />
     <Content Include="externalref\SharedComponents.pdb" />
+    <Content Include="Global.asax" />
     <Content Include="HighCPUPage1.aspx" />
     <Content Include="HighCPUPage2.aspx" />
     <Content Include="HiringDB.aspx" />
@@ -189,6 +190,9 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HighCPUPage1.aspx.cs">
       <DependentUpon>HighCPUPage1.aspx</DependentUpon>
