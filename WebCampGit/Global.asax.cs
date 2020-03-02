@@ -14,7 +14,8 @@ namespace demomvp
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            if (WebConfigurationManager.AppSettings["HANG_ON_STARTUP"] != null && bool.TryParse(WebConfigurationManager.AppSettings["HANG_ON_STARTUP"], out bool hangOnStartup))
+            bool hangOnStartup = false;
+            if (WebConfigurationManager.AppSettings["HANG_ON_STARTUP"] != null && bool.TryParse(WebConfigurationManager.AppSettings["HANG_ON_STARTUP"], out hangOnStartup))
             {
                 if (hangOnStartup)
                 {
