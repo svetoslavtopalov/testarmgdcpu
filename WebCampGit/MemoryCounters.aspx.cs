@@ -29,24 +29,69 @@ namespace demomvp
             public uint PrivateUsage;
         }
 
+        [StructLayout(LayoutKind.Sequential, Size = 72)]
+        private struct PROCESS_MEMORY_COUNTERS_EX_x64
+        {
+            public uint cb;
+            public uint PageFaultCount;
+            public UInt64 PeakWorkingSetSize;
+            public UInt64 WorkingSetSize;
+            public UInt64 QuotaPeakPagedPoolUsage;
+            public UInt64 QuotaPagedPoolUsage;
+            public UInt64 QuotaPeakNonPagedPoolUsage;
+            public UInt64 QuotaNonPagedPoolUsage;
+            public UInt64 PagefileUsage;
+            public UInt64 PeakPagefileUsage;
+            public UInt64 PrivateUsage;
+        }
+
+        [DllImport("Kernel32.dll", EntryPoint = "RtlZeroMemory", SetLastError = false)]
+        static extern void ZeroMemory(IntPtr dest, IntPtr size);
+
         [DllImport("psapi.dll", SetLastError = true)]
         static extern bool GetProcessMemoryInfo(IntPtr hProcess, out PROCESS_MEMORY_COUNTERS_EX counters, uint size);
 
+        [DllImport("psapi.dll", SetLastError = true)]
+        static extern bool GetProcessMemoryInfo(IntPtr hProcess, out PROCESS_MEMORY_COUNTERS_EX_x64 counters, uint size);
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            IntPtr currentProcessHandle = GetCurrentProcess();
-            PROCESS_MEMORY_COUNTERS_EX memoryCounters;
+            if (IntPtr.Size == 4)
+            {
+                // 32-bit
+                IntPtr currentProcessHandle = GetCurrentProcess();
+                PROCESS_MEMORY_COUNTERS_EX memoryCounters;
 
-            memoryCounters.cb = (uint)Marshal.SizeOf(typeof(PROCESS_MEMORY_COUNTERS_EX));
-            if (GetProcessMemoryInfo(currentProcessHandle, out memoryCounters, memoryCounters.cb))
-            {
-                lblMessage.Text = "memoryCounters.PrivateUsage in MB = " + memoryCounters.PrivateUsage/ (1024*1024);
+                memoryCounters.cb = (uint)Marshal.SizeOf(typeof(PROCESS_MEMORY_COUNTERS_EX));
+                if (GetProcessMemoryInfo(currentProcessHandle, out memoryCounters, memoryCounters.cb))
+                {
+                    lblMessage.Text = "memoryCounters.PrivateUsage in MB = " + memoryCounters.PrivateUsage / (1024 * 1024);
+                }
+                else
+                {
+                    throw new Exception("GetProcessMemoryInfo returned false. Error Code is " +
+          Marshal.GetLastWin32Error());
+                }
             }
-            else
+            else if (IntPtr.Size == 8)
             {
-                throw new Exception("GetProcessMemoryInfo returned false. Error Code is " +
-      Marshal.GetLastWin32Error());
+                // 64-bit
+                IntPtr currentProcessHandle = GetCurrentProcess();
+                PROCESS_MEMORY_COUNTERS_EX_x64 memoryCounters;
+
+                memoryCounters.cb = (uint)Marshal.SizeOf(typeof(PROCESS_MEMORY_COUNTERS_EX_x64));
+                if (GetProcessMemoryInfo(currentProcessHandle, out memoryCounters, memoryCounters.cb))
+                {
+                    lblMessage.Text = "memoryCounters.PrivateUsage in MB = " + memoryCounters.PrivateUsage / (1024 * 1024);
+                }
+                else
+                {
+                    throw new Exception("GetProcessMemoryInfo returned false. Error Code is " +
+          Marshal.GetLastWin32Error());
+                }
             }
+            
         }
     }
 }
