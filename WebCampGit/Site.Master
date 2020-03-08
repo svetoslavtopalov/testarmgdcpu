@@ -145,6 +145,18 @@
                                     <span class="hidden-xs">Environment Variables</span>
                                 </a>
                             </li>
+                            <li class="dropdown">
+                                <a href="~/MemoryCounters.aspx" class="dropdown-toggle" runat="server">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                    <span class="hidden-xs">Memory Counters</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="~/PrintConnectionSummary.aspx" class="dropdown-toggle" runat="server">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                    <span class="hidden-xs">TCP Connection Summary</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
