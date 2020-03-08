@@ -18,8 +18,8 @@ namespace demomvp
             HttpResponse response = base.Response;
             object length = webClient.DownloadString("http://www.bing.com/").Length;
             double totalMilliseconds = DateTime.Now.Subtract(now).TotalMilliseconds;
-            response.Write(string.Format("Bing Returned {0} bytes of content in {1} ms", length, totalMilliseconds.ToString()));            
-            ConnectionUtilities.PrintConnections(base.Response);
+            response.Write(string.Format("Bing Returned {0} bytes of content in {1} ms", length, totalMilliseconds.ToString()));
+            lblMessage.Text = ConnectionUtilities.PrintConnections();
 
         }
     }
