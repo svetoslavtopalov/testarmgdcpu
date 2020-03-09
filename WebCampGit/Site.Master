@@ -157,6 +157,12 @@
                                     <span class="hidden-xs">TCP Connection Summary</span>
                                 </a>
                             </li>
+                            <li class="dropdown">
+                                <a href="~/Memoryleak.aspx" class="dropdown-toggle" runat="server">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                    <span class="hidden-xs">Memory Leak Byte Arrays</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
 

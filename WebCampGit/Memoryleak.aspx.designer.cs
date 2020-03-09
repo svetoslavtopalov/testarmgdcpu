@@ -10,7 +10,7 @@
 namespace demomvp {
     
     
-    public partial class leakingconnections {
+    public partial class Memoryleak {
         
         /// <summary>
         /// lblMessage control.

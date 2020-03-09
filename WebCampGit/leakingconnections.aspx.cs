@@ -16,7 +16,7 @@ namespace demomvp
 
             (new WebClient()).OpenRead("http://www.bing.com/");
 
-            ConnectionUtilities.PrintConnections(base.Response);
+            lblMessage.Text = ConnectionUtilities.PrintConnections();
         }
     }
 }
