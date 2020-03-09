@@ -109,6 +109,7 @@
     <Content Include="HiringDB.aspx" />
     <Content Include="leakingconnections.aspx" />
     <Content Include="MemoryCounters.aspx" />
+    <Content Include="Memoryleak.aspx" />
     <Content Include="PrintConnectionSummary.aspx" />
     <Content Include="ProcessCrash.aspx" />
     <Content Include="SlowAsync.aspx" />
@@ -230,6 +231,13 @@
     </Compile>
     <Compile Include="MemoryCounters.aspx.designer.cs">
       <DependentUpon>MemoryCounters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Memoryleak.aspx.cs">
+      <DependentUpon>Memoryleak.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Memoryleak.aspx.designer.cs">
+      <DependentUpon>Memoryleak.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProcessCrash.aspx.cs">
       <DependentUpon>ProcessCrash.aspx</DependentUpon>
