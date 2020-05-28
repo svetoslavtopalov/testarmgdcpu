@@ -42,18 +42,27 @@ namespace demomvp
             IntPtr pResult = IntPtr.Zero;
 
             var dwRet = RegOpenKeyEx(HKEY_LOCAL_MACHINE, "Software\\Microsoft\\Fusion", 0, KEY_QUERY_VALUE, out hKey);
-
+            
             if (dwRet == 0)
             {
+                output.AppendLine($"going to call RegQueryValueEx");
                 // Get the size of buffer we will need
                 uint retVal = RegQueryValueEx(hKey, "EnableLog", 0, ref type, IntPtr.Zero, ref size);
+
+                output.AppendLine($"RegQueryValueEx retVal is {retVal} and size is {size}");
+
                 if (size == 0)
                 {
                     return;
                 }
 
                 pResult = Marshal.AllocHGlobal(size);
+
+                output.AppendLine($"Calling RegQueryValueEx SECOND time");
+
                 retVal = RegQueryValueEx(hKey, "EnableLog", 0, ref type, pResult, ref size);
+
+                output.AppendLine($"RegQueryValueEx retval is {retVal} and size is {size}");
 
                 if (retVal != 0)
                 {
@@ -77,7 +86,7 @@ namespace demomvp
 
             }
 
-            lblMessage.Text = output.ToString();
+            lblMessage.Text = output.ToString().Replace(Environment.NewLine, "<br/>"); ;
         }
     }
 }
