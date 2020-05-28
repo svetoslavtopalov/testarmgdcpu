@@ -116,6 +116,7 @@
     <Content Include="SlowAsync.aspx" />
     <Content Include="StackOverflowPage.aspx" />
     <Content Include="TestDatabaseconnection.aspx" />
+    <Content Include="TestFusion.aspx" />
     <Content Include="Unexpected\Default.aspx" />
     <Content Include="Unexpected\Web.config" />
     <Content Include="Site.Master" />
@@ -303,6 +304,13 @@
     </Compile>
     <Compile Include="TestDatabaseconnection.aspx.designer.cs">
       <DependentUpon>TestDatabaseconnection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestFusion.aspx.cs">
+      <DependentUpon>TestFusion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestFusion.aspx.designer.cs">
+      <DependentUpon>TestFusion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Unexpected\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
