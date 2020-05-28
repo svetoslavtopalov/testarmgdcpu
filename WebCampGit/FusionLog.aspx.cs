@@ -35,14 +35,19 @@ namespace demomvp
         protected void Page_Load(object sender, EventArgs e)
         {
             var output = new StringBuilder();
+            output.AppendLine($"Page Load started");
             int size = 1024;
             StringBuilder keyBuffer = new StringBuilder();
             RegistryValueKind type = RegistryValueKind.Unknown;
             UIntPtr hKey = UIntPtr.Zero;
             IntPtr pResult = IntPtr.Zero;
 
+            output.AppendLine($"Calling RegOpenKeyEx for Fusion");
+
             var dwRet = RegOpenKeyEx(HKEY_LOCAL_MACHINE, "Software\\Microsoft\\Fusion", 0, KEY_QUERY_VALUE, out hKey);
-            
+
+            output.AppendLine($"RegOpenKeyEx returned {dwRet}");
+
             if (dwRet == 0)
             {
                 output.AppendLine($"going to call RegQueryValueEx");
