@@ -103,6 +103,7 @@
     <Content Include="docs\MySqlTransaction.xml" />
     <Content Include="externalref\SharedComponents.dll" />
     <Content Include="externalref\SharedComponents.pdb" />
+    <Content Include="FusionLog.aspx" />
     <Content Include="Global.asax" />
     <Content Include="HighCPUPage1.aspx" />
     <Content Include="HighCPUPage2.aspx" />
@@ -193,6 +194,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionLog.aspx.cs">
+      <DependentUpon>FusionLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionLog.aspx.designer.cs">
+      <DependentUpon>FusionLog.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
