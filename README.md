@@ -32,6 +32,7 @@ start cmd /k "c:\Program Files (x86)\IIS Resources\TinyGet\tinyget.exe" -srv:<yo
 ```
 
 ## Deployment Link:
-<a href="https://github.com/puneet-gupta/WebCampGit" target="_blank">
+## Deployment Link:
+<a href="https://deploy.azure.com?repository=https://github.com/puneet-gupta/WebCampGit" target="_blank">
     <img src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/deploybutton.png"/>
 </a> 
