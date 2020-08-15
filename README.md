@@ -30,3 +30,9 @@ start cmd /k "c:\Program Files (x86)\IIS Resources\TinyGet\tinyget.exe" -srv:<yo
 start cmd /k "c:\Program Files (x86)\IIS Resources\TinyGet\tinyget.exe" -srv:<yourwebApp>.azurewebsites.net -uri:/TracePage.aspx -t -threads:2
 
 ```
+
+## Deployment Link:
+## Deployment Link:
+<a href="https://deploy.azure.com?repository=https://github.com/puneet-gupta/WebCampGit" target="_blank">
+    <img src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/deploybutton.png"/>
+</a> 
