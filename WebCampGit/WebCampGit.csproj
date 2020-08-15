@@ -103,6 +103,7 @@
     <Content Include="docs\MySqlTransaction.xml" />
     <Content Include="externalref\SharedComponents.dll" />
     <Content Include="externalref\SharedComponents.pdb" />
+    <Content Include="FusionLog.aspx" />
     <Content Include="Global.asax" />
     <Content Include="HighCPUPage1.aspx" />
     <Content Include="HighCPUPage2.aspx" />
@@ -115,6 +116,7 @@
     <Content Include="SlowAsync.aspx" />
     <Content Include="StackOverflowPage.aspx" />
     <Content Include="TestDatabaseconnection.aspx" />
+    <Content Include="TestFusion.aspx" />
     <Content Include="Unexpected\Default.aspx" />
     <Content Include="Unexpected\Web.config" />
     <Content Include="Site.Master" />
@@ -193,6 +195,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FusionLog.aspx.cs">
+      <DependentUpon>FusionLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FusionLog.aspx.designer.cs">
+      <DependentUpon>FusionLog.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -295,6 +304,13 @@
     </Compile>
     <Compile Include="TestDatabaseconnection.aspx.designer.cs">
       <DependentUpon>TestDatabaseconnection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestFusion.aspx.cs">
+      <DependentUpon>TestFusion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestFusion.aspx.designer.cs">
+      <DependentUpon>TestFusion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Unexpected\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

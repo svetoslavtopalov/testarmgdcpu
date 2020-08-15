@@ -20,13 +20,13 @@
             <div class="container-fluid expanded-panel">
                 <div class="row">
                     <div id="logo" class="col-xs-12 col-sm-2">
-                        <a href="#">Demo WebApp</a>
+                        <a href="#"><%= Request.Url.Host.Split('.')[0] %></a>
                     </div>
                     <div id="top-panel" class="col-xs-12 col-sm-10">
                         <div class="row">
 
                             <div class="col-xs-4 col-sm-8 top-panel-right">
-                                <h4>&nbsp;Demo WebApp-Azure App Service - Connected to <%= Environment.MachineName %></h4>
+                                <h4>&nbsp;<%= Request.Url.Host %> hosted on App Service - Connected to <%= Environment.MachineName %></h4>
                             </div>
                         </div>
                     </div>
@@ -161,6 +161,12 @@
                                 <a href="~/Memoryleak.aspx" class="dropdown-toggle" runat="server">
                                     <i class="fa fa-pencil-square-o"></i>
                                     <span class="hidden-xs">Memory Leak Byte Arrays</span>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="~/FusionLog.aspx" class="dropdown-toggle" runat="server">
+                                    <i class="fa fa-pencil-square-o"></i>
+                                    <span class="hidden-xs">Fusion Log Setting</span>
                                 </a>
                             </li>
                         </ul>
