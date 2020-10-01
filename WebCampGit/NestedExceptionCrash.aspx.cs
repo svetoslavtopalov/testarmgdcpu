@@ -30,7 +30,10 @@ namespace demomvp
     {
         private void RaiseEvent() => RaiseEventVoidAsync();
 
-        private async void RaiseEventVoidAsync() => throw new Exception("Error!");
+        private async void RaiseEventVoidAsync()
+        {
+            throw new Exception("Error!");
+        }
 
         protected  void Page_Load(object sender, EventArgs e)
         {
