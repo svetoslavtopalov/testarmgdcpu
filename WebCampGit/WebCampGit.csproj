@@ -89,6 +89,7 @@
   <ItemGroup>
     <Content Include="AsyncThreadDelaySleep.aspx" />
     <Content Include="correctconnections.aspx" />
+    <Content Include="CrashVars.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="docs\MySqlCommand.xml" />
     <Content Include="docs\MySqlCommandBuilder.xml" />
@@ -190,6 +191,13 @@
     </Compile>
     <Compile Include="correctconnections.aspx.designer.cs">
       <DependentUpon>correctconnections.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrashVars.aspx.cs">
+      <DependentUpon>CrashVars.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrashVars.aspx.designer.cs">
+      <DependentUpon>CrashVars.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
