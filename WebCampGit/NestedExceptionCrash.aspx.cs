@@ -28,7 +28,10 @@ namespace demomvp
 
     public partial class NestedExceptionCrash : System.Web.UI.Page
     {
-        private void RaiseEvent() => RaiseEventVoidAsync();
+        private void RaiseEvent()
+        {
+            RaiseEventVoidAsync();
+        }
 
         private async void RaiseEventVoidAsync()
         {
@@ -62,9 +65,9 @@ namespace demomvp
             {
                 RaiseEventVoidAsync();
             }
-            catch
+            catch (Exception ex)
             {
-                throw;
+                throw new ApplicationException("The CrashMe function crashed with an inner exception", ex);
             }
         }
 
