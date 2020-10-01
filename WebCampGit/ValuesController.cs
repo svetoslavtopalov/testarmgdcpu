@@ -3,12 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace demomvp
 {
+    class TypicalException : ApplicationException
+    {
+    }
+
     public class ValuesController : ApiController
     {
+        [HttpGet]
+        [Route("AsyncException")]
+        public async Task<string> AsyncException()
+        {
+            throw new TypicalException();
+        }
+
         // GET api/<controller>
         public IEnumerable<string> Get()
         {

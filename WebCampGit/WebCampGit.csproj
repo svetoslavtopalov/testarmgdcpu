@@ -111,6 +111,7 @@
     <Content Include="leakingconnections.aspx" />
     <Content Include="MemoryCounters.aspx" />
     <Content Include="Memoryleak.aspx" />
+    <Content Include="NestedExceptionCrash.aspx" />
     <Content Include="PrintConnectionSummary.aspx" />
     <Content Include="ProcessCrash.aspx" />
     <Content Include="SlowAsync.aspx" />
@@ -130,6 +131,7 @@
     <Content Include="YSOD.ASPX" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\azconf.pubxml" />
+    <None Include="Properties\PublishProfiles\demowebcampnew - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -247,6 +249,12 @@
     </Compile>
     <Compile Include="Memoryleak.aspx.designer.cs">
       <DependentUpon>Memoryleak.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NestedExceptionCrash.aspx.cs">
+      <DependentUpon>NestedExceptionCrash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NestedExceptionCrash.aspx.designer.cs">
+      <DependentUpon>NestedExceptionCrash.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProcessCrash.aspx.cs">
       <DependentUpon>ProcessCrash.aspx</DependentUpon>
