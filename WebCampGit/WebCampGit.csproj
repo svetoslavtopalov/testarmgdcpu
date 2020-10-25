@@ -112,6 +112,7 @@
     <Content Include="leakingconnections.aspx" />
     <Content Include="MemoryCounters.aspx" />
     <Content Include="Memoryleak.aspx" />
+    <Content Include="MemoryLeakWorkingSet.aspx" />
     <Content Include="NestedExceptionCrash.aspx" />
     <Content Include="PrintConnectionSummary.aspx" />
     <Content Include="ProcessCrash.aspx" />
@@ -257,6 +258,13 @@
     </Compile>
     <Compile Include="Memoryleak.aspx.designer.cs">
       <DependentUpon>Memoryleak.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MemoryLeakWorkingSet.aspx.cs">
+      <DependentUpon>MemoryLeakWorkingSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemoryLeakWorkingSet.aspx.designer.cs">
+      <DependentUpon>MemoryLeakWorkingSet.aspx</DependentUpon>
     </Compile>
     <Compile Include="NestedExceptionCrash.aspx.cs">
       <DependentUpon>NestedExceptionCrash.aspx</DependentUpon>
