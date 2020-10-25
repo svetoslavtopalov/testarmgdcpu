@@ -28,10 +28,9 @@ namespace demomvp
                 dict.TryAdd("StaticEntry", new List<UserTrackingModel> { userTrackingModel });
             }
 
-            foreach(var item in dict)
+            foreach(var items in dict.Values.ToList())
             {
-                var userModels = item.Value;
-                foreach(var m in userModels)
+                foreach(var m in items)
                 {
                     foreach(var b in m.EncryptedBlob)
                     {
