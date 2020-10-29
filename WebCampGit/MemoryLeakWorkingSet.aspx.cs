@@ -12,32 +12,24 @@ namespace demomvp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Application["StaticDictionary"] == null)
+            if (Application["StaticDictionaryWorkingSet"] == null)
             {
-                Application["StaticDictionary"] = new ConcurrentDictionary<string, List<UserTrackingModel>>();
+                Application["StaticDictionaryWorkingSet"] = new List<List<byte[]>>();
             }
-            var dict = Application["StaticDictionary"] as ConcurrentDictionary<string, List<UserTrackingModel>>;
-            var userTrackingModel = new UserTrackingModel(Guid.NewGuid().ToString());
+            var dict = Application["StaticDictionaryWorkingSet"] as List<List<byte[]>>;
 
-            if (dict.ContainsKey("StaticEntry"))
+            var rnd = new Random();
+            var list = new List<byte[]>();
+            int i = 0;
+            while (i < 16100)
             {
-                dict["StaticEntry"].Add(userTrackingModel);
-            }
-            else
-            {
-                dict.TryAdd("StaticEntry", new List<UserTrackingModel> { userTrackingModel });
+                i++;
+                byte[] b = new byte[1024];
+                b[rnd.Next(0, b.Length)] = byte.MaxValue;
+                list.Add(b);
             }
 
-            foreach(var items in dict.Values.ToList())
-            {
-                foreach(var m in items)
-                {
-                    foreach(var b in m.EncryptedBlob)
-                    {
-                        var c = b.ToString();
-                    }
-                }
-            }
+            dict.Add(list);
         }
     }
 }
