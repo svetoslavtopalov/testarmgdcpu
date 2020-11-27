@@ -10,28 +10,41 @@ namespace demomvp
 {
     public partial class Memoryleak : System.Web.UI.Page
     {
-        const int BYTES_LEAK = 1024 * 1024 * 10;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Application["StaticDictionary"] == null)
             {
-                Application["StaticDictionary"] = new ConcurrentDictionary<string, List<byte[]>>();
+                Application["StaticDictionary"] = new ConcurrentDictionary<string, List<UserTrackingModel>>();
             }
-
-            var dict = Application["StaticDictionary"] as ConcurrentDictionary<string, List<byte[]>>;
-
-            var byteArray = new byte[BYTES_LEAK];
-            
+            var dict = Application["StaticDictionary"] as ConcurrentDictionary<string, List<UserTrackingModel>>;
+            var userTrackingModel = new UserTrackingModel(Guid.NewGuid().ToString());
+                        
             if (dict.ContainsKey("StaticEntry"))
             {
-                dict["StaticEntry"].Add(byteArray);
+                dict["StaticEntry"].Add(userTrackingModel);
             }
             else
             {
-                dict.TryAdd("StaticEntry", new List<byte[]> { byteArray });
+                dict.TryAdd("StaticEntry", new List<UserTrackingModel> { userTrackingModel });
             }
 
-            lblMessage.Text = $"Memory {BYTES_LEAK / 1024} Kbytes leaked at " + DateTime.Now.ToString();
+            lblMessage.Text = $"Memory leaked at " + DateTime.Now.ToString();
+        }
+    }
+
+    public class UserTrackingModel
+    {
+        const int BYTES_LEAK = 1024 * 1024 * 3;
+        public DateTime PageVisited { get; set; }
+        public string SessionId { get; set; }
+        public byte[] EncryptedBlob { get; set; }
+
+        public UserTrackingModel(string uniqueId)
+        {
+            SessionId = uniqueId;
+            PageVisited = DateTime.Now;
+            EncryptedBlob = new byte[BYTES_LEAK];
         }
     }
 }

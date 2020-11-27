@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>demomvp</RootNamespace>
     <AssemblyName>demomvp</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -112,10 +112,12 @@
     <Content Include="leakingconnections.aspx" />
     <Content Include="MemoryCounters.aspx" />
     <Content Include="Memoryleak.aspx" />
+    <Content Include="MemoryLeakWorkingSet.aspx" />
     <Content Include="NestedExceptionCrash.aspx" />
     <Content Include="PrintConnectionSummary.aspx" />
     <Content Include="ProcessCrash.aspx" />
     <Content Include="SlowAsync.aspx" />
+    <Content Include="StackOverflowManagedException.aspx" />
     <Content Include="StackOverflowPage.aspx" />
     <Content Include="TestDatabaseconnection.aspx" />
     <Content Include="TestFusion.aspx" />
@@ -258,6 +260,13 @@
     <Compile Include="Memoryleak.aspx.designer.cs">
       <DependentUpon>Memoryleak.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MemoryLeakWorkingSet.aspx.cs">
+      <DependentUpon>MemoryLeakWorkingSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MemoryLeakWorkingSet.aspx.designer.cs">
+      <DependentUpon>MemoryLeakWorkingSet.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NestedExceptionCrash.aspx.cs">
       <DependentUpon>NestedExceptionCrash.aspx</DependentUpon>
     </Compile>
@@ -306,6 +315,13 @@
     </Compile>
     <Compile Include="SlowSql.aspx.designer.cs">
       <DependentUpon>SlowSql.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StackOverflowManagedException.aspx.cs">
+      <DependentUpon>StackOverflowManagedException.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StackOverflowManagedException.aspx.designer.cs">
+      <DependentUpon>StackOverflowManagedException.aspx</DependentUpon>
     </Compile>
     <Compile Include="StackOverflowPage.aspx.cs">
       <DependentUpon>StackOverflowPage.aspx</DependentUpon>
