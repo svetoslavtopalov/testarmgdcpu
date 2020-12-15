@@ -133,6 +133,12 @@
                                 <span class="hidden-xs">Crash Environment Variables</span>
                             </a>
                         </li>
+                         <li class="dropdown">
+                            <a href="~/FailFast.aspx" class="dropdown-toggle" runat="server">
+                                <i class="fa fa-pencil-square-o"></i>
+                                <span class="hidden-xs">Fail Fast</span>
+                            </a>
+                        </li>
                         <li class="dropdown">
                             <a href="~/highcpupage1.aspx" class="dropdown-toggle" runat="server">
                                 <i class="fa fa-pencil-square-o"></i>
