@@ -11,7 +11,7 @@ namespace demomvp
 {
 
 
-    public partial class CrashVars
+    public partial class HostName
     {
 
         /// <summary>

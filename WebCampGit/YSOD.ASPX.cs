@@ -15,6 +15,7 @@ namespace demomvp
         protected void Page_Load(object sender, EventArgs e)
         {
             Utilities.GetData();
+            throw new ApplicationException("An exception occurred");
             message.Text = "Page Loaded Successfully";
         }
     }
