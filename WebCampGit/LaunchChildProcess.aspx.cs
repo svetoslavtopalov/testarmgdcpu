@@ -12,7 +12,7 @@ namespace demomvp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Process.Start("ping.exe", "127.0.0.1 -n 30");
+            Process.Start("tcpping.exe", "127.0.0.1 -n 30");
             lblMessage.Text = $"Lanched child process at {DateTime.UtcNow} UTC";
         }
     }
