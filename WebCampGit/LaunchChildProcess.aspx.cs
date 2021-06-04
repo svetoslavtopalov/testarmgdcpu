@@ -12,8 +12,8 @@ namespace demomvp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Process.Start("tcpping.exe", "127.0.0.1 -n 30");
-            lblMessage.Text = $"Lanched child process at {DateTime.UtcNow} UTC";
+            Process.Start("tcpping.exe", "127.0.0.1 -n 120");
+            lblMessage.Text = $"Launched child process tcpping at {DateTime.UtcNow} UTC";
         }
     }
 }
