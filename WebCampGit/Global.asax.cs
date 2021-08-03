@@ -32,7 +32,37 @@ namespace demomvp
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
+            if (bool.TryParse(WebConfigurationManager.AppSettings["FAIL_ON_STARTUP"], out bool failOnStartup))
+            {
+                if (failOnStartup)
+                {
+                    // Default to 500.31
+                    int statusCode = 500;
+                    int subStatusCode = 31;
 
+                    if (WebConfigurationManager.AppSettings["STARTUP_ERROR_CODE"] != null)
+                    {
+                        string failureCode = WebConfigurationManager.AppSettings["STARTUP_ERROR_CODE"];
+                        var failureCodeArray = failureCode.Split('.');
+                        if (failureCodeArray.Length > 1)
+                        {
+                            if (int.TryParse(failureCodeArray[1], out int substatus))
+                            {
+                                subStatusCode = substatus;
+                            }
+                        }
+                        if (int.TryParse(failureCodeArray[0], out int status))
+                        {
+                            statusCode = status;
+                        }
+                    }
+
+                    HttpContext.Current.Response.StatusCode = statusCode;
+                    HttpContext.Current.Response.SubStatusCode = subStatusCode;
+                    var httpApplication = sender as HttpApplication;
+                    httpApplication.CompleteRequest();
+                }
+            }
         }
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)
