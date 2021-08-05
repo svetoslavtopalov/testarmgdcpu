@@ -34,7 +34,8 @@ namespace demomvp
         {
             if (bool.TryParse(WebConfigurationManager.AppSettings["FAIL_ON_STARTUP"], out bool failOnStartup))
             {
-                if (failOnStartup)
+                if (failOnStartup 
+                    && !HttpContext.Current.Request.Path.ToLower().Contains("fusionlog"))
                 {
                     // Default to 500.31
                     int statusCode = 500;
