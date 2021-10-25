@@ -111,6 +111,7 @@
     <Content Include="HighCPUPage2.aspx" />
     <Content Include="HiringDB.aspx" />
     <Content Include="HostName.aspx" />
+    <Content Include="LaunchChildProcess.aspx" />
     <Content Include="leakingconnections.aspx" />
     <Content Include="MemoryCounters.aspx" />
     <Content Include="Memoryleak.aspx" />
@@ -254,6 +255,13 @@
     </Compile>
     <Compile Include="HostName.aspx.designer.cs">
       <DependentUpon>HostName.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LaunchChildProcess.aspx.cs">
+      <DependentUpon>LaunchChildProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LaunchChildProcess.aspx.designer.cs">
+      <DependentUpon>LaunchChildProcess.aspx</DependentUpon>
     </Compile>
     <Compile Include="leakingconnections.aspx.cs">
       <DependentUpon>leakingconnections.aspx</DependentUpon>
